@@ -1,0 +1,19 @@
+<h1 class="title">Posts Data</h1>
+
+<!-- <div *ngIf="postData.length > 0"> -->
+    @if(postData.length > 0){
+        @for (post of postData; track $index) {
+            <div class="post">
+                <!-- *ngFor="let post of postData" -->
+                <h3 class="heading">{{ post.title }}</h3>
+                <p class="body-text">{{ post.body }}</p>
+            </div>
+        }
+    } 
+    @else if (postData.length == 1) {
+        <p>One post available.</p>
+    } 
+    @else {
+        <p>No posts available.</p>
+    }
+
