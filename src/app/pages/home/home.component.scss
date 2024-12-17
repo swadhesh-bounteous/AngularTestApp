@@ -1,0 +1,27 @@
+.post{
+    border: 2px solid rgb(43, 43, 115);
+    border-radius: 10px;
+    color: rgb(0, 0, 55);
+    padding: 6px;
+    margin-bottom: 6px;
+    padding-left: 15px;
+}
+
+.title{
+    font-style: oblique;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(56, 93, 94);
+    text-decoration: underline;
+}
+
+.heading{
+    text-transform: uppercase;
+    color: rgb(56, 93, 94);
+    font-style: oblique;
+}
+
+.body-text{
+    color: cadetblue;
+    font-style: italic;
+}
