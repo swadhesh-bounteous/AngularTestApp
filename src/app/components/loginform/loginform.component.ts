@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-loginform',
   standalone: false,
@@ -9,8 +9,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginformComponent {
   loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
   handleSubmit(): void {
     if (this.loginForm.valid) {
