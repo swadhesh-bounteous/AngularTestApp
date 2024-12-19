@@ -10,6 +10,8 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { HighlightDirective } from './highlight.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginformComponent } from './components/loginform/loginform.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,14 @@ import { HighlightDirective } from './highlight.directive';
     NavbarComponent,
     AboutComponent,
     DetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

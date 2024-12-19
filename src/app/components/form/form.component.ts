@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
-
+  title='';
+  body=''
 }

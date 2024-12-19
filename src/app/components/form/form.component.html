@@ -1,1 +1,13 @@
-<p>form works!</p>
+<article>
+    <h1>Blog Post</h1>
+    <section>
+        <label for="title">Post title</label>
+        <input type="text" id="title" [(ngModel)]="title"/>
+        <label for="body">Post body</label>
+        <textarea id="body" [(ngModel)]="body"></textarea>
+    </section>
+     <section>
+        <p>Title: {{title}}</p>
+        <p>Value: {{body}}</p>
+      </section>
+</article>
