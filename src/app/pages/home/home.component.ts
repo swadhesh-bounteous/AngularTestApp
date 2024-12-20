@@ -9,7 +9,9 @@ import { HomeserviceService } from '../../services/homeservice.service';
   styleUrls: ['./home.component.scss'] 
 })
 export class HomeComponent {
-  postData: Post[] = []; 
+  postData: Post[] = [];
+  errorMessage: string = '';  
+
   constructor(private homeService: HomeserviceService) {}
 
   ngOnInit(): void {
@@ -17,8 +19,15 @@ export class HomeComponent {
   }
 
   private fetchPostData(): void {
-    this.homeService.getPostData().subscribe((data: Post[]) => {
-      this.postData = data;
+    this.homeService.getPostData().subscribe({
+      next: (data: Post[]) => {
+        this.postData = data;
+        console.log('Post data fetched successfully:', data); 
+      },
+      error: (err) => {
+        this.errorMessage = 'An error occurred while fetching post data.';
+        console.error('Error fetching post data:', err); 
+      }
     });
   }
 }
